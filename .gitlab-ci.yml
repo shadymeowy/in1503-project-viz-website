@@ -1,0 +1,8 @@
+deploy-pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "No build: publish what's already in ./public"
+  pages: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
